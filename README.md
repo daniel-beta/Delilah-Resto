@@ -101,3 +101,5 @@ Valida la documentación que se encuentra en el archivo `spec.yml`, copiala y pe
 #### 8. Postman
 
 Podrás importar el archivo `Delilah-Resto.postman_collection.json` como colección en **POSTMAN** y así probar allí cada uno de los endpoints.
+
+![image](https://user-images.githubusercontent.com/64673306/147806761-a4d3d6bb-067d-4d79-8d34-08792621bd39.png)
