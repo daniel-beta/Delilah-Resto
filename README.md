@@ -70,33 +70,33 @@ Valida la documentación que se encuentra en el archivo `spec.yml`, copiala y pe
 
 ##### USERS
 
-| method | endpoint              | body                                                      | header  | description         |
-| ------ | --------------------- | --------------------------------------------------------- | ------- | ------------------- |
-| GET    | /v1/api/users         |                                                           | {TOKEN} | Get all users       |
-| POST   | /v1/api/users         | {nombre_user, email, phone, address, contrasena, id_role} | {TOKEN} | Create a new user   |
-| GET    | /v1/api/users/:userId |                                                           | {TOKEN} | Search a user by ID |
-| PUT    | /v1/api/users/:userId | {id_role}                                                 | {TOKEN} | Update user role    |
-| DELETE | /v1/api/users/:userId | {mealsId} (params)                                        | {TOKEN} | Delete a user       |
+| method | endpoint              | body                                                      | header  | description                 |
+| ------ | --------------------- | --------------------------------------------------------- | ------- | --------------------------- |
+| GET    | /v1/api/users         |                                                           | {TOKEN} | Get all users (Admin)       |
+| POST   | /v1/api/users         | {nombre_user, email, phone, address, contrasena, id_role} | {TOKEN} | Create a new user (Admin)   |
+| GET    | /v1/api/users/:userId |                                                           | {TOKEN} | Search a user by ID (Admin) |
+| PUT    | /v1/api/users/:userId | {id_role}                                                 | {TOKEN} | Update user role (Admin)    |
+| DELETE | /v1/api/users/:userId | {mealsId} (params)                                        | {TOKEN} | Delete a user (Admin)       |
 
 ##### MEALS
 
-| method | endpoint               | body                       | header  | description         |
-| ------ | ---------------------- | -------------------------- | ------- | ------------------- |
-| POST   | /v1/api/meals          | {nombre_meal, precio, img} | {TOKEN} | Create a new meal   |
-| GET    | /v1/api/meals          |                            |         | Get all meals       |
-| GET    | /v1/api/meals/:mealsId |                            |         | Search a meal by ID |
-| PUT    | /v1/api/meals/:mealsId | {nombre_meal, precio, img} | {TOKEN} | Update a meal       |
-| DELETE | /v1/api/meals/:mealsId | {mealsID} (params)         | {TOKEN} | Delete a meal       |
+| method | endpoint               | body                       | header  | description               |
+| ------ | ---------------------- | -------------------------- | ------- | ------------------------- |
+| POST   | /v1/api/meals          | {nombre_meal, precio, img} | {TOKEN} | Create a new meal (Admin) |
+| GET    | /v1/api/meals          |                            |         | Get all meals             |
+| GET    | /v1/api/meals/:mealsId |                            |         | Search a meal by ID       |
+| PUT    | /v1/api/meals/:mealsId | {nombre_meal, precio, img} | {TOKEN} | Update a meal (Admin)     |
+| DELETE | /v1/api/meals/:mealsId | {mealsID} (params)         | {TOKEN} | Delete a meal (Admin)     |
 
 ##### ORDERS
 
 | method | endpoint                | body                                         | header  | description                 |
 | ------ | ----------------------- | -------------------------------------------- | ------- | --------------------------- |
 | POST   | /v1/api/orders          | {id_user, id_meal, id_forma_pago, id_status} | {TOKEN} | Get all orders              |
-| GET    | /v1/api/orders          |                                              | {TOKEN} | Create a new order          |
+| GET    | /v1/api/orders          |                                              | {TOKEN} | Create a new order (Admin)  |
 | GET    | /v1/api/orders/user     |                                              | {TOKEN} | Get all orders from my user |
-| PUT    | /v1/api/orders/:orderId | {orderId} (params), id_status                | {TOKEN} | Update order status         |
-| DELETE | /v1/api/orders/:orderId | {orderId} (params)                           | {TOKEN} | Delete an order             |
+| PUT    | /v1/api/orders/:orderId | {orderId} (params), id_status                | {TOKEN} | Update order status (Admin) |
+| DELETE | /v1/api/orders/:orderId | {orderId} (params)                           | {TOKEN} | Delete an order (Admin)     |
 
 #### 8. Postman
 
